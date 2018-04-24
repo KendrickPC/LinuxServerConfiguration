@@ -14,5 +14,6 @@ I will be running Ubuntu Linux for this particular project
 	4. Type vagrant init ubuntu/trusty64 to tell Vagrant what kind of Linux virtual machine 
 	we will run.
 	5. Type vagrant up to download and start running the virtual machine (initial setup time
-		is about 15 minutes)
+		is about 10 minutes)
+	6. 
 
