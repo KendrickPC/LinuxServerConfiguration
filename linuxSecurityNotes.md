@@ -164,24 +164,84 @@ cat /etc/apt/sources.list
 	change PasswordAuthentication to no, then save file. Press enter.
 	sudo service ssh restart
 	Now all users will be forced to login using a keypair. SSH will not allow users to login w/a username and passwd anymore.
+
+
+## File Permissions
+	check filePermissions.png to compare with ls -al in student terminal
+
+	octal permissions: 0 = no permissions whatsoever. 
+	see octalPermissions.png file for summary.
+
+	example:
+	-rw-r--r-- 1 student student 3637 Apr 24 07:45 .bashrc
+	 6  4  4	= 644
+
+	read = 4, write = 2, x(execute) = 1, 0 = no permissions.
+
+## Change Group and Change Owner commands
+	sudo chgrp [user] .[filename]
+	sudo chown [user] .[filename]
+
+## Firewalls and UFW (still logged into student ssh)
+	Check defaultPorts.png picture for common default ports.
 	
+	sudo ufw status
+	Status: inactive
+	
+	sudo ufw default deny incoming
+	Default incoming policy changed to 'deny'
+	(be sure to update your rules accordingly)
+	
+	sudo ufw default allow outgoing
+	Default outgoing policy changed to 'allow'
+	(be sure to update your rules accordingly)
+
+	Check firewall:
+	sudo ufw status 
+	Status: inactive
+	We must manually turn on the firewall ourselves after configuring the firewall.
+
+## Configuring ports in UFW
+	sudo ufw allow ssh
+	Rules updated
+	Rules updated (v6)
+	sudo ufw allow 2222/tcp (because vagrant virtual machine is port 2222)
+	Rules updated
+	Rules updated (v6)
+	sudo ufw allow www (basic http server)
+	Rules updated
+	Rules updated (v6)
+	sudo ufw enable
+	Firewall is active and enabled on system startup
+	sudo ufw status
+
+	Status: active
+
+	To                         Action      From
+	--                         ------      ----
+	22                         ALLOW       Anywhere
+	2222/tcp                   ALLOW       Anywhere
+	80/tcp                     ALLOW       Anywhere
+	22 (v6)                    ALLOW       Anywhere (v6)
+	2222/tcp (v6)              ALLOW       Anywhere (v6)
+	80/tcp (v6)                ALLOW       Anywhere (v6)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Instructions on how to configure your servers
+	"LAMP" Stack (Linux, Apache, MySQL, PHP)
+	https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-14-04
+	
+	"LEMP" Stack (Linux, nginx, MySQL, PHP)
+	https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04
+	
+	PEPS Mail and File Storage
+	https://www.digitalocean.com/community/tutorials/how-to-run-your-own-mail-server-and-file-storage-with-peps-on-ubuntu-14-04
+	
+	Mail-in-a-Box Email Server
+	https://www.digitalocean.com/community/tutorials/how-to-run-your-own-mail-server-with-mail-in-a-box-on-ubuntu-14-04
+	
+	Lita IRC Chat Bot
+	https://www.digitalocean.com/community/tutorials/how-to-install-the-lita-chat-bot-for-irc-on-ubuntu-14-04
 
 
 
