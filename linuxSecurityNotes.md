@@ -114,17 +114,57 @@ cat /etc/apt/sources.list
 	sudo cat /etc/passwd 
 	<!-- (student user now has access to sudo) -->
 
+## Resetting Passwords
+	Forcing student user to reset their password:
+	Using the passwd command, use the following:
+	-e sets the password to expire
+	
+	sudo passwd -e student
 
+	new passwd = laziness
+	
+## Generating Key Pairs
+	Generate key pairs locally. 
+	ssh-keygen
+	You will be asked to give a file name for the keygen
+	file name will be linuxCourse
+	/Users/everydaykenneth/.ssh/linuxCourse
+	enter passphrase twice:
+	passphrase = laziness
+	Linux has generated two files: 
+	[] Your identification has been saved in /Users/everydaykenneth/.ssh/linuxCourse.
+	[] Your public key has been saved in /Users/everydaykenneth/.ssh/linuxCourse.pub.
+	.pub file is what we will place on our server to enable authentication
+	SSH version 2 protocol supports DSA, ECDSA, ED25519 and RSA key types.
+	You can find this information by running man ssh-keygen, then -t
+	MDA and SHA256 are hashing algorithms not suitable for public key encryption.
 
+## Manually Installing a Public Key
+	First, log into the server as the student. (vagrant up, ssh student@127.0.0.1 -p 2222)
+	Now create a directory called .ssh with (mkdir .ssh)
+	Create a new file called authorized_keys (touch .ssh/authorized_keys)
+	Now go back into the local machine (cd ~) and type (cat .ssh/linuxCourse.pub)
+	Copy and paste the ssh-rsa key from above - the last line should be .local
+	Back on the server as the student user (vagrant up, ssh student@127.0.0.1 -p 2222), edit the authorized key file with the following terminal command:
+	nano .ssh/authorized_keys
+	(paste the cat .ssh/linuxCourse.pub content into the file.)
 
+	Set up specific permissions on the ssh directory and the authorized_keys file:
+	In terminal, run (ch mod 700 .ssh) in the student file login directory
+	In terminal, run (ch mod 644 .ssh/authorized_keys) in the student file login authorized_keys file
 
+	Now that we're all done, go back out to the root project folder. Instead of logging in with (ssh student@127.0.0.1 -p 2222), we can use the following:
+	ssh student@127.0.0.1 -p 2222 -i ~/.ssh/linuxCourse
 
+## Forcing Key Based Authentication
+	Disable password based logins. This will force users to login only using the keypair. To do this, you have to edit the configuration file for sshd.
 
-
-
-
-
-
+	login as student:
+	sudo nano /etc/ssh/sshd_config
+	change PasswordAuthentication to no, then save file. Press enter.
+	sudo service ssh restart
+	Now all users will be forced to login using a keypair. SSH will not allow users to login w/a username and passwd anymore.
+	
 
 
 
