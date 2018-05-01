@@ -90,5 +90,33 @@
 	sudo apache2ctl restart
 	(No error messages occuring now)
 
+## First WSGI Application
+	Test apache configuration by writing WSGI python code.
+	sudo nano /var/www/html/myapp.wsgi
 
+			def application(environ, start_response):
+		    status = '200 OK'
+		    output = 'Hello Kenderson!'
+
+		    response_headers = [('Content-type', 'text/plain'), ('Content-Length', str(len(output)))]
+		    start_response(status, response_headers)
+
+		    return [output]
+
+    Go to localhost:8080 in browser to check if WSGI application is working
+
+## Installing PostgreSQL
+
+	Most web applications require persistent data storage, typically using a database server. Let's install PostgreSQL to server our data using the command: 
+			sudo apt-get install postgresql
+
+	Since I am installing my web server and database server on the same machine, I do not need to modify my firewall settings. 
+
+	My web server will communicate with the database via an internal mechanism that does not cross the boundaries of the firewall. If I were installing my database on a separate machine, I would need to modify the firewall settings on both the web server and the database server to permit these requests.
+
+	Exercise
+	Update the /var/www/html/myapp.wsgi application so that it successfully connects to a database, queries a table for data and presents that piece of data rather than the text Hello World! 
+	Create a table and populate it with data, then query it from the app.
+
+### Research for Exercise Notes
 
