@@ -1,19 +1,16 @@
-# Linux Server Configurations
+# Linux Server Configuration
 
-With so many Linux distributions available, how do you pick the right one? 
-Red Hat Enterprise is the most popular distribution for enterprises, but it is not free. 
+## Project Overview
+Take a baseline installation of a Linux server and prepare it to host a web application. 
+Secure my server from a number of attack vectors, install and configure a database server, and an existing web application onto my linux server.
 
-I will be running Ubuntu Linux for this particular project
+## Why this Project?
+I want to develop a deep understanding of exactly what my web application is doing, how it is hosted, and the interactions between multiple systems; these are what define a Full Stack Web Developer. 
+With this project, I'll be turning a brand-new, bare bones, Linux server into the secure and efficient web application host my application will need.
 
-## Instructions
-	1. Download and install VirtualBox
-	https://www.virtualbox.org/wiki/Download_Old_Builds_5_1
-	2. Download and install Vagrant
-	https://www.vagrantup.com/
-	3. Create a new project folder on the computer and open that folder within the terminal.
-	4. Type vagrant init ubuntu/trusty64 to tell Vagrant what kind of Linux virtual machine 
-	we will run.
-	5. Type vagrant up to download and start running the virtual machine (initial setup time
-		is about 10 minutes)
-	6. 
+## What I Learned?
+I learned how to access, secure, and perform the initial configuration of a bare-bones Linux server. 
+I also learned how to install and configure a web and database server and actually host a web application.
 
+Deploying my web application to a publicly accessible server is the first step in getting users.
+Properly securing my application ensures my application remains stable and that my user’s data is safe.
