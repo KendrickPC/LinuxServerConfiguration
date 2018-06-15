@@ -1,10 +1,12 @@
 # Amazon Lightsail
 
-Get started on Lightsail
-Get started on Lightsail
-We're recommending Amazon Lightsail for this project. If you prefer, you can use any other service that gives you a publicly accessible Ubuntu Linux server. But Lightsail works pretty well and it's what we've tested.
+## Get started on Lightsail
+We're recommending Amazon Lightsail for this project. If you prefer, you
+can use any other service that gives you a publicly accessible Ubuntu Linux
+server. But Lightsail works pretty well and it's what we've tested.
 
-There are a few things you need to do when you create your server instance.
+## There are a few things you need to do when you create your server 
+instance.
 
 1. Log in!
 First, log in to Lightsail. If you don't already have an Amazon Web Services account, you'll be prompted to create one.
