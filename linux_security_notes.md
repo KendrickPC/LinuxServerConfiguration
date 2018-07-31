@@ -1,6 +1,6 @@
 # Linux Security Notes
 
-Distro Watch has been around since 2001 as a source of news about Linux 
+Distro Watch has been around since 2001 as a source of news about Linux
 distributions and other Free and Open-Source operating systems.
 (My personal favorite is the Page Hit Rankings section on the homepage)
 	https://distrowatch.com/
@@ -26,27 +26,33 @@ sudo ls -al /home/ubuntu/.ssh
 
 
 ## sudo vs su
-The su command stands for super user or root user. ... Comparing the both, sudo lets one use the user account password to run system command. On the other hand, su forces one to share the root passwords to other users. Also, sudo doesn't activate the root shell and runs a single command.
+The su command stands for super user or root user. ... Comparing the both,
+sudo lets one use the user account password to run system command. On the
+other hand, su forces one to share the root passwords to other users.
+Also, sudo doesn't activate the root shell and runs a single command.
 
-It's typically recommended that you not use the su command when you can use sudo for one/few operations instead. 
+It's typically recommended that you not use the su command when you can
+use sudo for one/few operations instead. 
 
 ## Package Source List in Linux
 cat /etc/apt/sources.list
 
+
+<!-- Testing on June 15, 2018 -->
 ## Updating Available Package Lists
-	updating package source list
-	sudo apt-get update
+	[x] updating package source list
+			sudo apt-get update
 
 ## Upgrading Installed Packages
-	updating software
-	sudo apt-get upgrade
+	[x] updating software
+			sudo apt-get upgrade
 
 ## Other package related tasks
 	man apt-get
 	<!-- remove packages no longer required -->
-	sudo apt-get autoremove
+	[x] sudo apt-get autoremove
 	<!-- install an application called finger -->
-	sudo apt-get install finger
+	[x] sudo apt-get install finger
 
 ## Discovering Packages
 	https://packages.ubuntu.com/
@@ -55,12 +61,15 @@ cat /etc/apt/sources.list
 
 ## Using Finger
 	<!-- Output all of the users currently logged into the system -->
-	finger
+	[x] finger
 	<!-- Additional information about a specific user -->
-	finger vagrant
+		sudo apt install vagrant
+	[x] finger vagrant
+	[x] (vagrant, no such user)
+<!-- End Testing June 15, 2018 10:57AM -->
 
 ## etc/passwd
-	cat /etc/passwd
+	[x] cat /etc/passwd
 	<!-- each line is organized in this format: -->
 	username:password:UID:GID:UID info:home directory:command/shell
 	1. username: the user’s login name
@@ -73,9 +82,13 @@ cat /etc/apt/sources.list
 
 ## User Management & Creating a New User
 	sudo adduser student
+		student
+		Kenneth P Chang
+		pw: laziness
+		room #: 27
 	<!-- add password (I just used student as the pw for this project -->
 	confirm adduser by using the finger command:
-	finger student
+	[x] finger student
 
 ## Connecting as the New User
 	New Terminal --> vagrant up
