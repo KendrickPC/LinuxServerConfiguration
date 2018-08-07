@@ -18,8 +18,10 @@ https://aws.amazon.com/
 
    Get the hostname from http://www.hcidata.info/host2ip.cgi
 
-4. 
-
+4. ![Accounts Page](readme_images/accounts_page.png)
+5. Download SSH Keypairs
+6. ![Firewall](readme_images/firewall.png)
+7. 
 
 
 
