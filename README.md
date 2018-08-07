@@ -1,6 +1,6 @@
 
 
-# Linux Server Configuration
+# Amazon Lightsail Setup
 
 1. Sign up for a Amazon Web Services Lightsail Account
 
@@ -22,15 +22,16 @@ https://aws.amazon.com/
 
 ![Accounts Page](readme_images/accounts_page.png)
 
-5. Download SSH Keypairs
 
-6. Add TCP Ports
+5. Add TCP Ports
 
 ![Firewall](readme_images/firewall.png)
 
-7. 
+6. Now we are finished with the Amazon Lightsail Setup! 
 
+# Linux Server Configuration
 
+1. 
 
 
 
