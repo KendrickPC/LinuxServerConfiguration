@@ -27,7 +27,12 @@ https://aws.amazon.com/
 ![.pem key to .ssh folder](readme_images/ssh.png)
 5. Rename the `.pem` file to `udacity.pem`
 6. To make the public key usable and secure, go back to your terminal and input `$ chmod 600 ~/.ssh/udacity.pem`
-7. 
+7. Log into Amazon Lightsail Server with `$ ssh -i ~/.ssh/udacity.pem ubuntu@52.194.229.119`
+8. Run `$ sudo apt-get update`
+9. Run `$ sudo apt-get upgrade`
+
+
+
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
