@@ -31,7 +31,7 @@ https://aws.amazon.com/
 
 # Linux Server Configuration
 
-1. 
+1. Show all files in Mac OSX by typing `$killall Finder` in the terminal. 
 
 
 
