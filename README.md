@@ -30,9 +30,8 @@ https://aws.amazon.com/
 7. Log into Amazon Lightsail Server with `$ ssh -i ~/.ssh/udacity.pem ubuntu@52.194.229.119`
 8. Run `$ sudo apt-get update`
 9. Run `$ sudo apt-get upgrade`
-
-
-
+10. Run `$ sudo apt-get install finger`
+11. 
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
