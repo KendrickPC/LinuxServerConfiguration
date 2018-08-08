@@ -37,7 +37,7 @@ https://aws.amazon.com/
 14. Create a new file under the sudoers directory: `$ sudo nano /etc/sudoers.d/grader`.
 15. Fill that file with `grader ALL=(ALL:ALL) ALL` using nano and save it.
 ![sudoers](readme_images/sudoers.png)
-16. 
+16. In order to prevent the `$ sudo: unable to resolve host error`, edit the hosts by `$ sudo nano /etc/hosts`, and then add `127.0.1.1 ip-10-20-37-65` under `127.0.1.1:localhost`
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
