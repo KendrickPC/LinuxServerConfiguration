@@ -1,5 +1,3 @@
-
-
 # Amazon Lightsail Setup
 
 1. Sign up for a Amazon Web Services Lightsail Account
@@ -22,7 +20,6 @@ https://aws.amazon.com/
 
 ![Accounts Page](readme_images/accounts_page.png)
 
-
 5. Add TCP Ports
 
 ![Firewall](readme_images/firewall.png)
@@ -31,8 +28,9 @@ https://aws.amazon.com/
 
 # Linux Server Configuration
 
-1. Show all files in Mac OSX by typing `$killall Finder` in the terminal. 
-
+1. Show all files in Mac OSX by typing `$ killall Finder` in the terminal. 
+2. Input in terminal `$ defaults write com.apple.finder AppleShowAllFiles TRUE`. 
+3. Locate the hidden .ssh folder.
 
 
 
