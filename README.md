@@ -1,13 +1,9 @@
 # Amazon Lightsail Setup
 
 1. Sign up for a Amazon Web Services Lightsail Account
-
 https://aws.amazon.com/
-
 2. Sign into AWS Console
-
 ![Create Instance in AWS](readme_images/Create_Instance.png)
-
 3. Private IP = 172.26.1.41
 
    Public IP = 52.194.229.119
@@ -17,21 +13,19 @@ https://aws.amazon.com/
    Get the hostname from http://www.hcidata.info/host2ip.cgi
 
 4. Download SSH Keypairs
-
 ![Accounts Page](readme_images/accounts_page.png)
-
 5. Add TCP Ports
-
 ![Firewall](readme_images/firewall.png)
-
 6. Now we are finished with the Amazon Lightsail Setup! 
 
 # Linux Server Configuration
 
 1. Show all files in Mac OSX by typing `$ killall Finder` in the terminal. 
 2. Input in terminal `$ defaults write com.apple.finder AppleShowAllFiles TRUE`. 
-3. Locate the hidden .ssh folder.
-
+3. Locate the hidden .ssh folder in the root of your Mac.
+4. Move the downloaded `.pem` file into your `.ssh` folder.
+![.pem key to .ssh folder](readme_images/ssh.png)
+5. 
 
 
 
