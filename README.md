@@ -25,9 +25,9 @@ https://aws.amazon.com/
 3. Locate the hidden .ssh folder in the root of your Mac.
 4. Move the downloaded `.pem` file into your `.ssh` folder.
 ![.pem key to .ssh folder](readme_images/ssh.png)
-5. 
-
-
+5. Rename the `.pem` file to `udacity.pem`
+6. To make the public key usable and secure, go back to your terminal and input `$ chmod 600 ~/.ssh/udacity.pem`
+7. 
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
