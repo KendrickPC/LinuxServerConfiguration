@@ -56,7 +56,8 @@ https://aws.amazon.com/
 8. Disconnect from Amazon Lightsail server
 
 # Linux Server Configuration Part IV
-1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.194.229.119`
+1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@52.194.229.119`
+
 2. Disable ssh login for root user: `$ sudo nano /etc/ssh/sshd_config`. Find the `PermitRootLogin` line and edit to `no`. 
 3. Restart ssh `$ sudo service ssh restart`
 4. Now we need to configure UFW to fulfill the requirement:
@@ -65,9 +66,11 @@ https://aws.amazon.com/
 * `$ sudo ufw allow 80/tcp`
 * `$ sudo ufw allow 123/udp`
 * `$ sudo ufw enable`
+5. Exit Terminal and take a break.
 
 # Deploying an Application
-
+1. SSH into machine using `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.194.229.119`
+2. 
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
