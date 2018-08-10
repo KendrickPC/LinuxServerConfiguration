@@ -56,7 +56,9 @@ https://aws.amazon.com/
 6. Change the owner from root to grader: `$ sudo chown -R grader:grader /home/grader/.ssh`
 7. Restart the ssh service: `$ sudo service ssh restart`
 8. We now need to enforce the key-based authentication: `$ sudo nano /etc/ssh/sshd_config`. Find the `PasswordAuthentication` line and change text after to `no`. After this, restart ssh again: `$ sudo service ssh restart`
-9. We now need to change the ssh port from 22 to 2200, as required by Udacity: `$ sudo nano /etc/ssh/ssdh_config` Find the Port line and change 22 to 2200. Restart ssh: `$ sudo service ssh restart`
+9. We now need to change the ssh port from 22 to 2200, as required by Udacity: `$ sudo nano /etc/ssh/sshd_config` Find the Port line and change 22 to 2200. Restart ssh: `$ sudo service ssh restart`
+10. Disconnect from the server. Log back through port 2200: `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@13.58.109.116`
+11. Disable ssh login for root user. `$ sudo nano /etc/ssh/sshd_config`. Find the `PermitRootLogin` line and edit to `no`. Restart `ssh $ sudo service ssh restart`
 
 # Linux Server Configuration Part IV
 1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@52.78.37.166`
