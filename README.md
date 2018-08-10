@@ -30,16 +30,14 @@ https://aws.amazon.com/
 7. Type `$ sudo su -` to become a root user. 
 8. Type  `$ sudo adduser grader` to create a user 'grader' 
 9. Log into Amazon Lightsail Server with `$ ssh -i ~/.ssh/udacity.pem ubuntu@52.194.229.119`
-
-10. Run `$ sudo apt-get update`
-12. Run `$ sudo apt-get upgrade`
-12. Run `$ sudo apt-get install finger`
-
-13. Enter `grader` UNIX password as `udacity`
-14. Create a new file under the sudoers directory: `$ sudo nano /etc/sudoers.d/grader`.
-15. Fill that file with `grader ALL=(ALL:ALL) ALL` using nano and save it.
+10. Fill that file with `grader ALL=(ALL:ALL) ALL` using nano and save it.
 ![sudoers](readme_images/sudoers.png)
-16. In order to prevent the `$ sudo: unable to resolve host error`, edit the hosts by `$ sudo nano /etc/hosts`, and then add `127.0.1.1 ip-10-20-37-65` under `127.0.1.1:localhost`
+11. In order to prevent the `$ sudo: unable to resolve host error`, edit the hosts by `$ sudo nano /etc/hosts`, and then add `127.0.1.1 ip-10-20-37-65` under `127.0.1.1:localhost`
+12. Run `$ sudo apt-get update`
+13. Run `$ sudo apt-get upgrade`
+14. Run `$ sudo apt-get install finger`
+15. Enter `grader` UNIX password as `udacity`
+16. Create a new file under the sudoers directory: `$ sudo nano /etc/sudoers.d/grader`.
 
 # Linux Server Configuration Part II
 1. Open up a new terminal window. Type `$ ssh-keygen -f ~/.ssh/udacity_key.rsa`
