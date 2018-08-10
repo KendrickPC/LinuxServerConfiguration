@@ -28,10 +28,11 @@ https://aws.amazon.com/
 ![.pem key to .ssh folder](readme_images/ssh.png)
 5. Rename the `.pem` file to `udacity.pem`
 6. To make the public key usable and secure, go back to your terminal and input `$ chmod 600 ~/.ssh/udacity.pem`
-7. Type `$ sudo su -` to become a root user. 
-8. Type  `$ sudo adduser grader` to create a user 'grader' 
-9. Enter `grader` UNIX password as `udacity`
-10. Log into Amazon Lightsail Server with `$ ssh -i ~/.ssh/udacity.pem ubuntu@52.194.229.119`
+7. Log into Amazon Lightsail Server with `$ ssh -i ~/.ssh/udacity.pem ubuntu@52.78.37.166`
+8. Type `$ sudo su -` to become a root user. 
+9. Type  `$ sudo adduser grader` to create a user 'grader' 
+10. Enter `grader` UNIX password as `udacity`
+
 11. Create a new file under the sudoers directory: `$ sudo nano /etc/sudoers.d/grader`.
 12. Fill that file with `grader ALL=(ALL:ALL) ALL` using nano and save it.
 ![sudoers](readme_images/sudoers.png)
