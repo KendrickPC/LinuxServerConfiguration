@@ -1,14 +1,15 @@
 # Amazon Lightsail Setup
 
+[Seoul Server]
 1. Sign up for a Amazon Web Services Lightsail Account
 https://aws.amazon.com/
 2. Sign into AWS Console
 ![Create Instance in AWS](readme_images/Create_Instance.png)
-3. Private IP = 172.26.1.41
+3. Private IP = 172.26.1.169
 
-   Public IP = 52.194.229.119
+   Public IP = 52.78.37.166
    
-   Host Name = ec2-52-194-229-119.ap-northeast-1.compute.amazonaws.com
+   Host Name = ec2-52-78-37-166.ap-northeast-2.compute.amazonaws.com
 
    Get the hostname from http://www.hcidata.info/host2ip.cgi
 
