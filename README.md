@@ -45,7 +45,7 @@ https://aws.amazon.com/
 1. Open up a new terminal window. Type `$ ssh-keygen -f ~/.ssh/udacity_key.rsa`
 2. Keep a blank password
 3. In the new terminal window (the one just opened up with instructions above), input `$ cat ~/.ssh/udacity_key.rsa.pub`
-4. Copy the RSA key.
+4. Copy the RSA key and save it somewhere private.
 
 # Linux Server Configuration Part III
 1. Return to the terminal window that is logged into root. Change directory to `$ cd /home/grader`
@@ -58,7 +58,7 @@ https://aws.amazon.com/
 8. Disconnect from Amazon Lightsail server
 
 # Linux Server Configuration Part IV
-1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@52.194.229.119`
+1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@52.78.37.166`
 
 2. Disable ssh login for root user: `$ sudo nano /etc/ssh/sshd_config`. Find the `PermitRootLogin` line and edit to `no`. 
 3. Restart ssh `$ sudo service ssh restart`
@@ -71,7 +71,7 @@ https://aws.amazon.com/
 5. Exit Terminal and take a break.
 
 # Deploying an Application
-1. SSH into machine using `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.194.229.119`
+1. SSH into machine using `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.78.37.166`
 2. 
 
 Resource Links:
