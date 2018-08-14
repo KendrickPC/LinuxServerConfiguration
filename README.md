@@ -74,7 +74,9 @@ https://aws.amazon.com/
 
 # Deploying an Application (be careful on these steps)
 1. SSH into machine using `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.78.37.166 -p 2200`
-2. 
+2a. `$ sudo apt-get install apache2`
+2b. `$ sudo apt-get install libapache2-mod-wsgi python-dev`
+2c. `$ sudo apt-get install git`
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
