@@ -77,6 +77,7 @@ https://aws.amazon.com/
 2. `$ sudo apt-get install apache2`
 3. `$ sudo apt-get install libapache2-mod-wsgi python-dev`
 4. `$ sudo apt-get install git`
+5. You should see the apache2 ubuntu default page on web address http://52.78.37.166/     [PUBLIC IP]
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
