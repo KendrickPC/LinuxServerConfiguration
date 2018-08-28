@@ -78,6 +78,15 @@ https://aws.amazon.com/
 3. `$ sudo apt-get install libapache2-mod-wsgi python-dev`
 4. `$ sudo apt-get install git`
 5. You should see the apache2 ubuntu default page on web address http://52.78.37.166/     [PUBLIC IP]
+6. Enable mod_wsgi with the command `$ sudo a2enmod wsgi` and restart Apache using `$ sudo service apache2 restart`
+7. Create a directory for the catalog application and make "grader" the user. Change ownership of directory as well. 
+8. `$ cd /var/www`
+9. `$ sudo mkdir catalog`
+10. `$ sudo chown -R grader:grader catalog`
+11. `$ cd catalog`
+12. Clone the project from Github using `$ git clone [your link] catalog`
+
+
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
