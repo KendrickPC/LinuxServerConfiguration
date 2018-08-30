@@ -116,8 +116,8 @@ This is what your command line should look like: (venv) grader@ip-172-26-X-169:/
 2. Use the `nano __init__.py` command to change the client_secrets.json line to `/var/www/catalog/catalog/client_secrets.json`
 3. Paste in the following:
 
-`
-<VirtualHost *:80>
+
+```<VirtualHost *:80>
     ServerName 52.78.37.166
     ServerAlias ec2-52-78-37-166.ap-northeast-2.compute.amazonaws.com
     ServerAdmin admin@35.167.27.204
@@ -137,7 +137,7 @@ This is what your command line should look like: (venv) grader@ip-172-26-X-169:/
     LogLevel warn
     CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-`
+```
 
 4. Enable to virtual host: `$ sudo a2ensite catalog.conf` and DISABLE the default host `$ a2dissite 000-default.conf`. Otherwise, your site will not load with the hostname
 5. 
