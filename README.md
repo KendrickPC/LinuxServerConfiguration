@@ -79,14 +79,68 @@ https://aws.amazon.com/
 4. `$ sudo apt-get install git`
 5. You should see the apache2 ubuntu default page on web address http://52.78.37.166/     [PUBLIC IP]
 6. Enable mod_wsgi with the command `$ sudo a2enmod wsgi` and restart Apache using `$ sudo service apache2 restart`
-7. Create a directory for the catalog application and make "grader" the user. Change ownership of directory as well. 
-8. `$ cd /var/www`
-9. `$ sudo mkdir catalog`
-10. `$ sudo chown -R grader:grader catalog`
-11. `$ cd catalog`
-12. Clone the project from Github using `$ git clone [your link] catalog`
 
+# Creating a directory for the application and make the user `grader` the owner.
+1. `$ cd /var/www`
+2. `$ sudo mkdir catalog`
+3. `$ sudo chown -R grader:grader catalog`
+4. `$ cd catalog`
+5. Clone the project from Github using `$ git clone [your link] catalog`
+6. Create a .wsgi file: `$ sudo nano catalog.wsgi` and add the following into this file:
 
+import sys
+import logging
+logging.basicConfig(stream=sys.stderr)
+sys.path.insert(0, "/var/www/catalog/")
+
+from catalog import app as application
+application.secret_key = 'supersecretkey'
+
+7. Rename your application.py, project.py, or whatever you called it in your catalog application folder to `__init__.py` by `$ mv project.py __init__.py`
+
+# Create Our Virtual Environment
+1. Make sure you are in `/var/www/catalog`
+2. `$ sudo apt-get install python-virtualenv`
+3. `$ sudo virtualenv venv`
+4. `$ source venv/bin/activate`
+5. `$ sudo chmod -R 777 venv`
+
+This is what your command line should look like: (venv) grader@ip-172-26-X-169:/var/www/catalog$ 
+
+# Virtualenv setup
+1. While our virtual environment is activated we need to install all packages required for our Flask application. Here are some defaults but you may have more to install.
+`$ sudo apt-get install python-pip`
+`$ sudo pip install flask`
+`$ sudo pip install httplib2 oauth2client sqlalchemy psycopg2`
+
+2. Use the `nano __init__.py` command to change the client_secrets.json line to `/var/www/catalog/catalog/client_secrets.json`
+3. Paste in the following:
+
+`
+<VirtualHost *:80>
+    ServerName 52.78.37.166
+    ServerAlias ec2-52-78-37-166.ap-northeast-2.compute.amazonaws.com
+    ServerAdmin admin@35.167.27.204
+    WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
+    WSGIProcessGroup catalog
+    WSGIScriptAlias / /var/www/catalog/catalog.wsgi
+    <Directory /var/www/catalog/catalog/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+    Alias /static /var/www/catalog/catalog/static
+    <Directory /var/www/catalog/catalog/static/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+`
+
+4. Enable to virtual host: `$ sudo a2ensite catalog.conf` and DISABLE the default host `$ a2dissite 000-default.conf`. Otherwise, your site will not load with the hostname
+5. 
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
