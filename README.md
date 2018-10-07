@@ -1,3 +1,22 @@
+# October 07, 2018
+
+Time to figure this setup once and for all. 
+Tomorrow I will make progress.
+
+Long time no see Github. =)
+
+
+
+# Helpful Links
+
+    Initial Server Setup with Ubuntu 16.04
+    https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04
+
+    How To Deploy a Flask Application on an Ubuntu VPS
+    https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+
+------------------------------------------------------
+
 # Amazon Lightsail Setup
 
 [Seoul Server]
@@ -116,8 +135,8 @@ This is what your command line should look like: (venv) grader@ip-172-26-X-169:/
 2. Use the `nano __init__.py` command to change the client_secrets.json line to `/var/www/catalog/catalog/client_secrets.json`
 3. Paste in the following:
 
-
-```<VirtualHost *:80>
+```
+<VirtualHost *:80>
     ServerName 52.78.37.166
     ServerAlias ec2-52-78-37-166.ap-northeast-2.compute.amazonaws.com
     ServerAdmin admin@35.167.27.204
@@ -140,7 +159,15 @@ This is what your command line should look like: (venv) grader@ip-172-26-X-169:/
 ```
 
 4. Enable to virtual host: `$ sudo a2ensite catalog.conf` and DISABLE the default host `$ a2dissite 000-default.conf`. Otherwise, your site will not load with the hostname
-5. 
+
+# Database Setup
+
+1. `$ sudo -u postgres -i`
+2. `$ psql`
+3. `postgres=# CREATE USER catalog WITH PASSWORD catalog;`
+ERROR:  syntax error at or near "catalog"
+
+
 
 Resource Links:
 https://github.com/callforsky/udacity-linux-configuration
