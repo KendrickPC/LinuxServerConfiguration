@@ -1,3 +1,39 @@
+# October 26, 2018
+
+## Amazon Web Services Linux Server Configuration
+
+### Tokyo
+Private IP = 172.26.7.99
+Public IP = 54.95.155.104
+
+### http://www.hcidata.info/host2ip.cgi
+IP Address : 54.95.155.104
+Location   : Japan (95% accuracy)
+Host Name = ec2-54-95-155-104.ap-northeast-1.compute.amazonaws.com
+
+Install and configure PostgreSQL
+https://github.com/payPan22/Udacity_FSND_LinuxServerConfiguration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # October 07, 2018
 
 Time to figure this setup once and for all. 
