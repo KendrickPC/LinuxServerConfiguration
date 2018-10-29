@@ -14,11 +14,36 @@ Host Name = ec2-54-95-155-104.ap-northeast-1.compute.amazonaws.com
 Install and configure PostgreSQL
 https://github.com/payPan22/Udacity_FSND_LinuxServerConfiguration
 
+# Monday, October 29, 2018
 
+## Install and configure PostgreSQL
+1. Install PostgreSQL 
+```$ sudo apt-get install postgresql```
 
+2. Check if no remote connections are allowed 
+```$ sudo vi /etc/postgresql/9.3/main/pg_hba.conf```
 
+3. Login as user "postgres" 
+```$ sudo su - postgres```
 
+4. Get into postgreSQL shell 
+```$ psql```
 
+5. Create a new database named catalog and create a new user named catalog in postgreSQL shell
+```postgres=# CREATE DATABASE catalog;
+postgres=# CREATE USER catalog;
+```
+6. Set a password for user catalog
+```postgres=# ALTER ROLE catalog WITH PASSWORD 'password';```
+
+7. Give user "catalog" permission to "catalog" application database
+```postgres=# GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;```
+
+8. Quit postgreSQL 
+```postgres=# \q```
+
+9. Exit from user "postgres" 
+```exit```
 
 
 
