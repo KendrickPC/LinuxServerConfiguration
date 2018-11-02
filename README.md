@@ -1,3 +1,9 @@
+November 02, 2018
+
+Clone and setup your Catalog App project
+
+https://github.com/rphadol/linuxServerConfiguration
+
 # October 26, 2018
 
 ## Amazon Web Services Linux Server Configuration
