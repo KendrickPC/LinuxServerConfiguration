@@ -1,3 +1,17 @@
+November 05, 2018
+
+
+BIGSAVE's Version of Instructions
+https://github.com/BigSave24/linux-server-configuration
+
+Public IP = 13.231.134.112
+Private IP = 172.26.3.142
+
+tokyo.pem
+
+$ chmod 600 ~/.ssh/udacity.pem
+$ ssh -i ~/.ssh/tokyo.pem ubuntu@13.231.134.112
+
 November 02, 2018
 
 Clone and setup your Catalog App project
