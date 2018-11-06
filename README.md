@@ -1,5 +1,17 @@
+November 06, 2018
+
+https://github.com/hassanpucit/Linux-Server-Configuration-Project
+
+Public IP: 18.179.111.117
+Private IP: 172.26.7.231
+
+Hassan Pucit Number #10
+
+
+
 November 05, 2018
 
+tokyo33.pem
 
 BIGSAVE's Version of Instructions
 https://github.com/BigSave24/linux-server-configuration
@@ -11,6 +23,7 @@ tokyo.pem
 
 $ chmod 600 ~/.ssh/udacity.pem
 $ ssh -i ~/.ssh/tokyo.pem ubuntu@13.231.134.112
+
 
 November 02, 2018
 
