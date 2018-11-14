@@ -1,7 +1,6 @@
 November 14, 2018
 
-Youtube Amazon Lighstail Lecture 30 Minutes
-https://www.youtube.com/watch?v=-Obku7UpsMo
+Create Static IP for Tomorrow's Test
 
 November 10, 2018
 
@@ -15,6 +14,7 @@ https://github.com/hassanpucit/Linux-Server-Configuration-Project
 
 Public IP: 18.179.111.117
 Private IP: 172.26.7.231
+ec2-18-179-111-117.ap-northeast-1.compute.amazonaws.com
 
 Hassan Pucit Number #10
 
