@@ -1,7 +1,13 @@
+November 14, 2018
+
+Youtube Amazon Lighstail Lecture 30 Minutes
+https://www.youtube.com/watch?v=-Obku7UpsMo
+
 November 10, 2018
 
 https://github.com/hassanpucit/Linux-Server-Configuration-Project
-Step 11: Install Virtual Environment
+Step 14: Configure and Enable New Virtual Host
+
 
 November 06, 2018
 
