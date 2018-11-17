@@ -1,3 +1,7 @@
+November 17, 2018
+
+Static IP testing with same instructions from a month ago.
+
 November 14, 2018
 
 Create Static IP for Tomorrow's Test
