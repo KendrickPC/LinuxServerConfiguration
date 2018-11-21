@@ -79,7 +79,7 @@ https://aws.amazon.com/
 11. Disable ssh login for root user. `$ sudo nano /etc/ssh/sshd_config`. Find the `PermitRootLogin` line and edit to `no`. Restart `ssh $ sudo service ssh restart`
 
 # Linux Server Configuration Part IV
-1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa grader@http://52.192.199.102 -p 2200`
+1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.192.199.102 -p 2200`
 2. Disable ssh login for root user: `$ sudo nano /etc/ssh/sshd_config`. Find the `PermitRootLogin` line and edit to `no`. 
 3. Restart ssh `$ sudo service ssh restart`
 4. Now we need to configure UFW to fulfill the requirement:
