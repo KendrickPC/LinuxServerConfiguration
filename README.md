@@ -1,119 +1,13 @@
-November 17, 2018
-
-Static IP testing with same instructions from a month ago.
-
-November 14, 2018
-
-Create Static IP for Tomorrow's Test
-
-November 10, 2018
-
-https://github.com/hassanpucit/Linux-Server-Configuration-Project
-Step 14: Configure and Enable New Virtual Host
-
-
-November 06, 2018
-
-https://github.com/hassanpucit/Linux-Server-Configuration-Project
-
-Public IP: 18.179.111.117
-Private IP: 172.26.7.231
-ec2-18-179-111-117.ap-northeast-1.compute.amazonaws.com
-
-Hassan Pucit Number #10
-
-
-
-November 05, 2018
-
-tokyo33.pem
-
-BIGSAVE's Version of Instructions
-https://github.com/BigSave24/linux-server-configuration
-
-Public IP = 13.231.134.112
-Private IP = 172.26.3.142
-
-tokyo.pem
-
-$ chmod 600 ~/.ssh/udacity.pem
-$ ssh -i ~/.ssh/tokyo.pem ubuntu@13.231.134.112
-
-
-November 02, 2018
-
-Clone and setup your Catalog App project
-
-https://github.com/rphadol/linuxServerConfiguration
-
-# October 26, 2018
 
 ## Amazon Web Services Linux Server Configuration
 
-### Tokyo
-Private IP = 172.26.7.99
-Public IP = 54.95.155.104
+### Catalog Hosting Name
 
-### http://www.hcidata.info/host2ip.cgi
-IP Address : 54.95.155.104
-Location   : Japan (95% accuracy)
-Host Name = ec2-54-95-155-104.ap-northeast-1.compute.amazonaws.com
+Public IP: 52.192.199.102
+Static IP: 52.192.199.102
+Host Name: ec2-52-192-199-102.ap-northeast-1.compute.amazonaws.com
 
-Install and configure PostgreSQL
-https://github.com/payPan22/Udacity_FSND_LinuxServerConfiguration
-
-# Monday, October 29, 2018
-
-## Install and configure PostgreSQL
-1. Install PostgreSQL 
-```$ sudo apt-get install postgresql```
-
-2. Check if no remote connections are allowed 
-```$ sudo vi /etc/postgresql/9.3/main/pg_hba.conf```
-
-3. Login as user "postgres" 
-```$ sudo su - postgres```
-
-4. Get into postgreSQL shell 
-```$ psql```
-
-5. Create a new database named catalog and create a new user named catalog in postgreSQL shell
-```postgres=# CREATE DATABASE catalog;
-postgres=# CREATE USER catalog;
-```
-6. Set a password for user catalog
-```postgres=# ALTER ROLE catalog WITH PASSWORD 'password';```
-
-7. Give user "catalog" permission to "catalog" application database
-```postgres=# GRANT ALL PRIVILEGES ON DATABASE catalog TO catalog;```
-
-8. Quit postgreSQL 
-```postgres=# \q```
-
-9. Exit from user "postgres" 
-```exit```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# October 07, 2018
-
-Time to figure this setup once and for all. 
-Tomorrow I will make progress.
-
-Long time no see Github. =)
-
+SSH Port 2200
 
 
 # Helpful Links
