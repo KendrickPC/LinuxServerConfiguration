@@ -46,7 +46,7 @@ https://aws.amazon.com/
 ![.pem key to .ssh folder](readme_images/ssh.png)
 5. Rename the `.pem` file to `udacity.pem`
 6. To make the public key usable and secure, go back to your terminal and input `$ chmod 600 ~/.ssh/udacity.pem`
-7. Log into Amazon Lightsail Server with `$ ssh -i ~/.ssh/udacity.pem ubuntu@52.78.37.166`
+7. Log into Amazon Lightsail Server with `$ ssh -i ~/.ssh/udacity.pem ubuntu@52.192.199.102`
 8. Type `$ sudo su -` to become a root user. 
 9. Type  `$ sudo adduser grader` to create a user 'grader' 
 10. Enter `grader` UNIX password as `udacity`
@@ -75,11 +75,11 @@ https://aws.amazon.com/
 7. Restart the ssh service: `$ sudo service ssh restart`
 8. We now need to enforce the key-based authentication: `$ sudo nano /etc/ssh/sshd_config`. Find the `PasswordAuthentication` line and change text after to `no`. After this, restart ssh again: `$ sudo service ssh restart`
 9. We now need to change the ssh port from 22 to 2200, as required by Udacity: `$ sudo nano /etc/ssh/sshd_config` Find the Port line and change 22 to 2200. Restart ssh: `$ sudo service ssh restart`
-10. Disconnect from the server. Log back through port 2200: `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@13.58.109.116`
+10. Disconnect from the server. Log back through port 2200: `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@52.192.199.102`
 11. Disable ssh login for root user. `$ sudo nano /etc/ssh/sshd_config`. Find the `PermitRootLogin` line and edit to `no`. Restart `ssh $ sudo service ssh restart`
 
 # Linux Server Configuration Part IV
-1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.78.37.166 -p 2200`
+1. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa grader@http://52.192.199.102 -p 2200`
 2. Disable ssh login for root user: `$ sudo nano /etc/ssh/sshd_config`. Find the `PermitRootLogin` line and edit to `no`. 
 3. Restart ssh `$ sudo service ssh restart`
 4. Now we need to configure UFW to fulfill the requirement:
@@ -91,11 +91,11 @@ https://aws.amazon.com/
 5. Exit Terminal and take a break.
 
 # Deploying an Application (be careful on these steps)
-1. SSH into machine using `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.78.37.166 -p 2200`
+1. SSH into machine using `$ ssh -i ~/.ssh/udacity_key.rsa grader@52.192.199.102 -p 2200`
 2. `$ sudo apt-get install apache2`
 3. `$ sudo apt-get install libapache2-mod-wsgi python-dev`
 4. `$ sudo apt-get install git`
-5. You should see the apache2 ubuntu default page on web address http://52.78.37.166/     [PUBLIC IP]
+5. You should see the apache2 ubuntu default page on web address http://52.192.199.102     [PUBLIC IP]
 6. Enable mod_wsgi with the command `$ sudo a2enmod wsgi` and restart Apache using `$ sudo service apache2 restart`
 
 # Creating a directory for the application and make the user `grader` the owner.
@@ -123,7 +123,7 @@ application.secret_key = 'supersecretkey'
 4. `$ source venv/bin/activate`
 5. `$ sudo chmod -R 777 venv`
 
-This is what your command line should look like: (venv) grader@ip-172-26-X-169:/var/www/catalog$ 
+This is what your command line should look like: (venv) grader@ip-XXX-XX-X-XXX:/var/www/catalog$ 
 
 # Virtualenv setup
 1. While our virtual environment is activated we need to install all packages required for our Flask application. Here are some defaults but you may have more to install.
