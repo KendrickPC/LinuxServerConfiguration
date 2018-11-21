@@ -3,11 +3,11 @@
 
 ### Catalog Hosting Name
 
-Public IP: 52.192.199.102
-Static IP: 52.192.199.102
-Host Name: ec2-52-192-199-102.ap-northeast-1.compute.amazonaws.com
+##### Public IP: 52.192.199.102
+##### Static IP: 52.192.199.102
+##### Host Name: ec2-52-192-199-102.ap-northeast-1.compute.amazonaws.com
 
-SSH Port 2200
+##### SSH Port 2200
 
 
 # Helpful Links
@@ -27,11 +27,7 @@ SSH Port 2200
 https://aws.amazon.com/
 2. Sign into AWS Console
 ![Create Instance in AWS](readme_images/Create_Instance.png)
-3. Private IP = 172.26.1.169
-
-   Public IP = 52.78.37.166
-   
-   Host Name = ec2-52-78-37-166.ap-northeast-2.compute.amazonaws.com
+3. Private IP = XXX.XX.XX.XX
 
    Get the hostname from http://www.hcidata.info/host2ip.cgi
 
@@ -140,8 +136,8 @@ This is what your command line should look like: (venv) grader@ip-172-26-X-169:/
 
 ```
 <VirtualHost *:80>
-    ServerName 52.78.37.166
-    ServerAlias ec2-52-78-37-166.ap-northeast-2.compute.amazonaws.com
+    ServerName 52.192.199.102
+    ServerAlias ec2-52-192-199-102.ap-northeast-1.compute.amazonaws.com
     ServerAdmin admin@35.167.27.204
     WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
     WSGIProcessGroup catalog
